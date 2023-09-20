@@ -70,4 +70,69 @@ if (fifthQuestion === "no" || fifthQuestion === "n") {
   // console.log("Invalid input.");
 }
 
-document.getElementById("knowledgeScore").innerHTML = knowledgeScore + " / 5";
+let maxGuesses = 4;
+let remainingGuesses = maxGuesses;
+
+for (i = 0; i < maxGuesses; i++) {
+  let sixthQuestion = prompt(
+    "Random Trivia: How many countries are there in Europe? " +
+      remainingGuesses +
+      " guesses left.)"
+  );
+  let sixthQuestionNumber = parseInt(sixthQuestion);
+
+  if (isNaN(sixthQuestionNumber)) {
+    alert("Invalid input. Please use numbers!");
+    remainingGuesses--;
+  } else if (sixthQuestionNumber < 44) {
+    alert("Incorrect answer! Too low, go higher!");
+    remainingGuesses--;
+  } else if (sixthQuestionNumber > 44) {
+    alert("Incorrect answer! Too high, go lower!");
+    remainingGuesses--;
+  } else {
+    alert("Correct answer! How did you guess that?!");
+    knowledgeScore++;
+    break;
+  }
+}
+
+if (remainingGuesses === 0) {
+  alert(
+    "You have run out of guesses. The answer was 44! Moving on to the next question."
+  );
+}
+
+let maxGuesses2 = 6;
+let remainingGuesses2 = maxGuesses2;
+
+for (i = 0; i < maxGuesses2; i++) {
+  let seventhQuestion = prompt(
+    "What is one of the colours in a rainbow? " +
+      remainingGuesses2 +
+      " guesses left."
+  );
+
+  if (
+    !(
+      seventhQuestion === "red" ||
+      seventhQuestion === "orange" ||
+      seventhQuestion === "yellow" ||
+      seventhQuestion === "green" ||
+      seventhQuestion === "blue" ||
+      seventhQuestion === "indigo" ||
+      seventhQuestion === "violet"
+    )
+  ) {
+    alert("Incorrect answer. Try again.");
+    remainingGuesses2--;
+  } else {
+    alert(
+      "Correct answer! " + seventhQuestion + " is one of my favourite colours."
+    );
+    knowledgeScore++;
+    break;
+  }
+}
+
+document.getElementById("knowledgeScore").innerHTML = knowledgeScore + "/7";
