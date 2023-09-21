@@ -1,0 +1,19 @@
+2023-09-21 15:00:30.494 [error] Canceled: Canceled
+	at Object.I [as $4] (/snap/code/140/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:10:1032)
+	at /snap/code/140/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:7647
+	at Array.forEach (<anonymous>)
+	at i.dispose (/snap/code/140/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:7612)
+	at n.terminate (/snap/code/140/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:7821)
+	at o.terminate (/snap/code/140/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:122:1513)
+	at D (/snap/code/140/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:135:9800)
+	at MessagePortMain.<anonymous> (/snap/code/140/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:135:6225)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367)
+2023-09-21 15:00:30.494 [info] Reading sessions from secret storage...
+2023-09-21 15:00:30.494 [info] Got 0 stored sessions
+2023-09-21 15:00:40.151 [info] Reading sessions from secret storage...
+2023-09-21 15:00:40.216 [info] Got 0 stored sessions
+2023-09-21 15:00:40.355 [info] Getting sessions for all scopes...
+2023-09-21 15:00:40.355 [info] Got 0 sessions for all scopes...
+2023-09-21 15:00:40.370 [info] Getting sessions for the following scopes: email offline_access openid profile
+2023-09-21 15:00:40.371 [info] Got 0 sessions for scopes: email offline_access openid profile
