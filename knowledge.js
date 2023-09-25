@@ -1,34 +1,28 @@
 let questions = [
   {
     question: "Is Cailum's favourite music Rock music?",
-    correctAnswer: "no",
-    correctResponse: "Correct answer! Well done champ.",
-    incorrectResponse:
-      "Incorrect answer. 90s hip-hop/pop was the right answer.",
+    answer: "no",
+    answer: "n",
   },
   {
     question: "Does Cailum play the piano?",
-    correctAnswer: "yes",
-    correctResponse: "Correct answer! Well done champ.",
-    incorrectResponse: "Incorrect answer. I do play the piano.",
+    answer: "yes",
+    answer: "y",
   },
   {
     question: "Did Cailum go to University?",
-    correctAnswer: "yes",
-    correctResponse: "Correct answer! Well done champ.",
-    incorrectResponse: "Incorrect answer. I went to LJMU.",
+    answer: "yes",
+    answer: "y",
   },
   {
     question: "Is Cailum 22?",
-    correctAnswer: "no",
-    correctResponse: "Correct answer! Well done champ.",
-    incorrectResponse: "Incorrect answer. I'm 23.",
+    answer: "no",
+    answer: "n",
   },
   {
     question: "Does Cailum live in Liverpool?",
-    correctAnswer: "yes",
-    correctResponse: "Correct answer! Well done champ.",
-    incorrectResponse: "Incorrect answer. I do live in Liverpool.",
+    answer: "yes",
+    answer: "y",
   },
 ];
 
@@ -37,29 +31,15 @@ let knowledgeScore = 0;
 for (let i = 0; i < questions.length; i++) {
   let userAnswer = prompt(questions[i].question).toLowerCase();
 
-  if (userAnswer === questions[i].correctAnswer || userAnswer === "y") {
-    alert(questions[i].correctResponse);
-    knowledgeScore++;
-  } else if (userAnswer !== questions[i].correctAnswer || userAnswer === "n") {
-    alert(questions[i].incorrectResponse);
-  } else {
-    alert("Invalid input.");
+  if (i < 5) {
+    if (userAnswer === questions[i].answer) {
+      alert("Correct! Well done champ.");
+      knowledgeScore++;
+    } else {
+      alert("Incorrect! Unlucky...");
+    }
   }
 }
-
-
-/* for (let i = 0; i < questions.length; i++) {
-  let userAnswer = prompt(questions[i].question).toLowerCase();
-
-  if (userAnswer === questions[i].correctAnswer || userAnswer === "y") {
-    alert(questions[i].correctResponse);
-    knowledgeScore++;
-  } else if (userAnswer === questions[i].correctAnswer || userAnswer === "n") {
-    alert(questions[i].incorrectResponse);
-  } else {
-    alert("Invalid input.");
-  }
-} */
 
 let maxGuesses = 4;
 let remainingGuesses = maxGuesses;
